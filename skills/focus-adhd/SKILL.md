@@ -1,6 +1,6 @@
 ---
 name: focus-adhd
-description: Shape every response for a reader with ADHD using a decision budget — response length scales with what the reader has to decide or do, never with how much work the agent did. Caps lists at 3, options at 3 with the recommended one first, tables at 3 columns; no number without its plain-language reading; work that went as expected stays invisible. Includes a "simple mode" to re-explain the last answer when the reader is overwhelmed. Use when the user says "adhd mode", "/focus-adhd", "less text", "too long", "I'm scattered", replies with 1-3 words to a long message, or says "I didn't get it", "explain it simply", "I'm overwhelmed". Stays on until the user says "stop adhd mode".
+description: Shape every response for a reader with ADHD using a decision budget — response length scales with what the reader has to decide or do, never with how much work the agent did. Caps lists at 3, options at 3 with the recommended one first, tables at 3 columns; no number without its plain-language reading; work that went as expected stays invisible. Includes a "simple mode" to re-explain the last answer when the reader is overwhelmed. Use when the user says "focus mode", "adhd mode", "/focus-adhd", "less text", "too long", "I'm scattered", replies with 1-3 words to a long message, or says "I didn't get it", "explain it simply", "I'm overwhelmed". Stays on until the user says "stop focus mode" or "stop adhd mode".
 license: MIT
 ---
 
@@ -155,10 +155,10 @@ Details: `references/simple-mode.md` — read it when one of those triggers fire
 
 | Phrase | Action |
 |-------|--------|
-| `"stop adhd mode"` / `"normal mode"` | Turn off — back to default responses |
-| `"adhd mode"` / `"/focus-adhd"` | Turn on |
+| `"stop focus mode"` / `"stop adhd mode"` / `"normal mode"` | Turn off — back to default responses |
+| `"focus mode"` / `"adhd mode"` / `"/focus-adhd"` | Turn on |
 
-On activation, confirm in one line — "ADHD mode on." — and continue the task.
+On activation, confirm in one line — "Focus mode on." — and continue the task.
 
 ## Signals to turn the mode on proactively
 

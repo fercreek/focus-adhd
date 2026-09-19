@@ -6,28 +6,45 @@ A Claude Code skill that shapes every response for a reader with ADHD. One law d
 
 > Response length scales with the **decisions and actions that belong to you** — never with how much work the agent did.
 
+## How it differs from i-have-adhd
+
+[`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) is excellent and this skill borrows from it. The difference is what decides the length:
+
+| | i-have-adhd | focus-adhd |
+|---|---|---|
+| What sets the length | formatting rules | **your pending decisions** (0 → 1 line) |
+| Work that went fine | shown as wins | invisible — only surprises earn words |
+| List cap | 5, by convention | 3, from working-memory research (Cowan 2001) |
+| Numbers | — | never alone: "18%, almost one in five" |
+
+**Use one or the other, not both** — their rules overlap and both answer to "stop adhd mode".
+
+It is also honest about its limits: the skill lists the source for every rule and declares the three places where no evidence exists, instead of filling them in.
+
 ## Before / after
 
-**Without it**, after a long task:
+**Without it**, after migrating a CSV import job:
 
 ```
-I've gone ahead and looked through the auth module. First I checked the
-middleware, which was fine. Then I looked at the token service and noticed
-the expiry was hardcoded, so I updated that. I also ran the test suite —
-all 42 tests passed. Along the way I noticed the README is outdated and a
-dependency is two versions behind. Let me know if you'd like me to look at
-any of those, or if there's anything else I can help with!
+I started by reading the importer to understand the current flow. Then I
+checked the CSV parser, which looked fine. I refactored the row mapper into
+its own module, added batching (500 rows per insert), and updated the tests.
+I ran the full suite and all 128 tests pass. I also benchmarked it: the
+10k-row file went from 94 s to 11 s. While I was in there I noticed the
+date column is parsed in the server timezone, and there are two unused
+helpers. Let me know if you'd like me to handle any of that!
 ```
 
 **With it:**
 
 ```
-Token expiry now reads from config (was hardcoded to 1 h). 42 tests green.
+Imports are 8x faster: the 10k-row file went from 94 s to 11 s. Tests green.
 
-Separately: one dependency is two versions behind. Update it next?
+One surprise: dates are parsed in the server's timezone, so rows near
+midnight can land on the wrong day. Fix it now (about 10 min)?
 ```
 
-One decision for you, so two lines. The steps that went fine are invisible.
+One decision for you, so a short answer. The refactor, the batching and the unused helpers are not your problem right now, so they stay out.
 
 ## What it does
 
@@ -50,7 +67,7 @@ In Claude Code:
 /plugin install focus-adhd@focus-adhd
 ```
 
-Then say **"adhd mode"** in any session. Say **"stop adhd mode"** to turn it off.
+Then say **"focus mode"** (or "adhd mode") in any session. Say **"stop focus mode"** (or "stop adhd mode") to turn it off.
 
 Update later with `/plugin marketplace update focus-adhd`.
 
@@ -64,7 +81,7 @@ Built on ideas from [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd
 
 ## Contributing
 
-`scripts/check-personal.sh` runs in CI and as a pre-commit hook (`git config core.hooksPath .githooks`). It blocks home paths, emails and phone numbers from being committed.
+See [CONTRIBUTING.md](CONTRIBUTING.md). `scripts/check-personal.sh` runs in CI and as a pre-commit hook (`git config core.hooksPath .githooks`). It blocks home paths, emails and phone numbers from being committed.
 
 ## License
 
