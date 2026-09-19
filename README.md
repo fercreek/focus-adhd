@@ -48,7 +48,7 @@ One decision for you, so a short answer. The refactor, the batching and the unus
 
 ## What it does
 
-- **Decision budget.** 0 decisions → 1 line. 1 → up to 3 lines. 2-4 → a numbered list. 5+ → split into "now" and "the rest".
+- **Decision budget.** 0 decisions → 1 line. 1 → up to 3 lines. 2-3 → a numbered list. 4+ → split into "now" and "the rest".
 - **Small working set.** Lists cap at 3, options at 3 with the recommended one first, tables at 3 columns. The cap shapes *presentation*, never analysis.
 - **No number alone.** "18%" becomes "18%, almost one in five".
 - **Concrete time, visible progress.** "About 15 min if tests exist", and "step 3 of 5" every turn.

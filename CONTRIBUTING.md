@@ -13,8 +13,15 @@ Improvements to the rules are welcome. Three things keep the skill honest:
    git config core.hooksPath .githooks
    ```
 
-   It runs `scripts/check-personal.sh`, which blocks home paths, emails and phone
-   numbers. You can add your own private words to a local `.personal-blocklist`
+   `pre-commit` checks exactly what you staged; `pre-push` also checks commit
+   messages, file names and author emails (only GitHub's `noreply` address is
+   allowed). Set it before your first commit:
+
+   ```sh
+   git config user.email <id>+<user>@users.noreply.github.com
+   ```
+
+   The scan blocks home paths, emails and phone numbers. You can add your own private words to a local `.personal-blocklist`
    (one pattern per line); it is git-ignored.
 
 Bump `version` in `.claude-plugin/plugin.json` with every change to the skill, or

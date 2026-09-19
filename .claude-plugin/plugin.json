@@ -1,6 +1,6 @@
 {
   "name": "focus-adhd",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ADHD-friendly responses for Claude Code: length scales with what you have to decide, not with how much the agent worked. 3-item lists, recommended option first, no number without its meaning, and a simple mode when you're overwhelmed.",
   "author": {
     "name": "fercreek",

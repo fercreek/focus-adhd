@@ -29,8 +29,8 @@ take + genuine surprises (something that did not go as expected).
 |---|---|
 | **0** — all done, nothing pending | **1 line.** What works now and where. |
 | **1** | 1-3 lines. The action first, context after. |
-| **2-4** | A numbered list, ≤2 lines per item. |
-| **≥5** | You are dumping. Split into "now" (≤3) and "the rest, ask me". |
+| **2-3** | A numbered list, ≤2 lines per item. |
+| **≥4** | You are dumping. Split into "now" (≤3) and "the rest, ask me". |
 
 Two corollaries do the work:
 
@@ -90,13 +90,17 @@ The first line is never context or "I did X". It depends on what the reader need
    **forward, not back**: where we are → what is verified → what's next. Never declare a
    state you did not verify: "the last thing I can verify is X".
 
-8. **If the reader doesn't answer the turn's question:** ask again, shorter. Don't move
-   on until you get an answer. **Don't repeat parked items every turn** — bring them back
+8. **If the reader doesn't answer a question that truly blocks the work:** ask again,
+   shorter, and don't start other work on top of it. A non-blocking question is simply
+   dropped — continue with the sensible default and say which one you took. **Don't repeat parked items every turn** — bring them back
    when the active work closes or when the reader asks.
 
 9. **Never propose leaving the mode.** Not "want to exit ADHD mode?", not as an option,
    not implied. The reader turns it on when scattered — which is when they least want to
    ask for it again — and asking whether to leave is one question too many.
+   **The one exception:** if YOU turned it on (see "Signals" below), say so once, with
+   the way out: "Focus mode on — say 'normal mode' to turn it off." A mode the reader
+   never asked for and doesn't know how to leave is a trap, not a help.
 
 10. **Time estimates in concrete units.** Never "a bit of work" or "not long". With ADHD
     every vague size feels the same. Give the number and what it depends on: "about 15
@@ -158,9 +162,13 @@ Details: `references/simple-mode.md` — read it when one of those triggers fire
 | `"stop focus mode"` / `"stop adhd mode"` / `"normal mode"` | Turn off — back to default responses |
 | `"focus mode"` / `"adhd mode"` / `"/focus-adhd"` | Turn on |
 
-On activation, confirm in one line — "Focus mode on." — and continue the task.
+On activation, confirm in one line — "Focus mode on." — and continue the task. If
+another installed skill or instruction already confirms activation, confirm only once.
 
 ## Signals to turn the mode on proactively
+
+Only turn it on by yourself when **two or more** of these show up, never on a single
+short reply — "yes" and "ok" are answers, not overload. And announce it (rule 9).
 
 - The reader answers a long question with 1-3 words
 - The reader says "I didn't get it", "what did you say", "repeat"

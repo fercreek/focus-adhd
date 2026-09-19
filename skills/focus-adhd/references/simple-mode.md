@@ -15,7 +15,8 @@ the last thing said (technical, long) and turn it into **one simple thing at a t
    - rollback → "go back to how it was, in one click"
 4. **Everyday analogies.** Mechanic, kitchen, house, waiter. Not tech.
 5. **At most 4 lines.** If you need more, split across turns.
-6. **Always close with "what now?"** — one clear option, or a yes/no question.
+6. **Close with "what now?"** — one clear next step. Make it a yes/no question only
+   when a decision is actually pending; otherwise state the step and do it.
 7. **No recap.** No "as we were saying". Straight in.
 
 ## Base format
