@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "focus-adhd",
+  "description": "ADHD-friendly responses for Claude Code, driven by a decision budget.",
+  "owner": {
+    "name": "fercreek"
+  },
+  "plugins": [
+    {
+      "name": "focus-adhd",
+      "description": "Response length scales with your decisions, not the agent's effort.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

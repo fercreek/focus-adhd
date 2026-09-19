@@ -1,0 +1,4 @@
+.DS_Store
+# Private words that must never be published. Kept local on purpose:
+# listing them in a public file would publish them.
+.personal-blocklist
