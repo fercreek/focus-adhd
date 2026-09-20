@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+This release declares the skill stable. Nothing in how it behaves changed — the rules
+have been untouched since 0.2.1, and 0.3.0 and 0.4.0 were packaging. What changes is the
+promise:
+
+- **The trigger phrases are a contract.** "focus mode" / "adhd mode" turn it on,
+  "stop focus mode" / "stop adhd mode" / "normal mode" turn it off. Removing or renaming
+  any of them is a breaking change and will be a major version.
+- **The names are a contract.** The plugin, the marketplace and the skill are all
+  `focus-adhd`; installs and any private layer built on top depend on that.
+- **Rules may be sharpened, not silently reversed.** A change that flips what the skill
+  does in a case it already covered ships as a major, with the reason in this file.
+
+The decision budget, the 3-item cap and the numbers-need-meaning rule stay as they are,
+with their sources listed in `SKILL.md` and the three gaps still declared rather than
+filled in.
+
 ## [0.4.0] - 2026-09-20
 
 ### Added
