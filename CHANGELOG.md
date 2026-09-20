@@ -4,6 +4,16 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- `scripts/release.sh`: runs the gates, bumps the version, closes the changelog entry,
+  commits, tags, pushes and opens the GitHub release. `--dry-run` shows the whole plan
+  without writing anything.
+- `scripts/bump_version.py`, which the release script uses to move the version forward
+  and turn `## [Unreleased]` into a dated entry. It refuses to release when that section
+  is empty — a release nobody can read is not a release.
+
 ## [0.3.0] - 2026-09-20
 
 First public release. No change to the skill's rules — this is packaging.
@@ -52,6 +62,7 @@ First public release. No change to the skill's rules — this is packaging.
 - First release: the `focus-adhd` skill, the plugin and marketplace manifests, and the
   personal-data gate with its hooks and CI job.
 
+[Unreleased]: https://github.com/fercreek/focus-adhd/compare/v0.3.0...HEAD
 [0.3.0]: https://github.com/fercreek/focus-adhd/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/fercreek/focus-adhd/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/fercreek/focus-adhd/compare/v0.1.0...v0.2.0

@@ -32,6 +32,21 @@ python3 scripts/check-manifests.py
 claude plugin validate . --strict
 ```
 
-Bump `version` in `.claude-plugin/plugin.json` with every change to the skill, or
-installed copies will not pick it up, and add the change under `## [Unreleased]` in
-[CHANGELOG.md](CHANGELOG.md).
+Describe the change under `## [Unreleased]` in [CHANGELOG.md](CHANGELOG.md). Don't bump
+the version by hand — the release script does it, and it reads that section for the
+release notes.
+
+## Cutting a release
+
+From a clean `main` that is in sync with `origin`:
+
+```sh
+scripts/release.sh minor --dry-run   # the whole plan, nothing written
+scripts/release.sh minor             # gates, bump, changelog, commit, tag, push, release
+```
+
+It runs the gates first, turns `## [Unreleased]` into a dated entry, commits, tags
+`vX.Y.Z`, pushes and opens the GitHub release. It stops if the tree is dirty, if you are
+not on `main`, if `main` and `origin/main` differ, or if `## [Unreleased]` is empty.
+
+Installed copies pick the release up with `claude plugin update focus-adhd@focus-adhd`.
