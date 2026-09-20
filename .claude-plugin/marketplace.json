@@ -3,14 +3,20 @@
   "name": "focus-adhd",
   "description": "ADHD-friendly responses for Claude Code, driven by a decision budget.",
   "owner": {
-    "name": "fercreek"
+    "name": "fercreek",
+    "url": "https://github.com/fercreek"
   },
   "plugins": [
     {
       "name": "focus-adhd",
+      "displayName": "Focus ADHD",
       "description": "Response length scales with your decisions, not the agent's effort.",
       "source": "./",
-      "category": "productivity"
+      "category": "productivity",
+      "homepage": "https://github.com/fercreek/focus-adhd#readme",
+      "repository": "https://github.com/fercreek/focus-adhd",
+      "license": "MIT",
+      "keywords": ["adhd", "accessibility", "focus", "concise-responses"]
     }
   ]
 }

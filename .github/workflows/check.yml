@@ -1,12 +1,10 @@
 name: check
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 jobs:
   personal-data:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: scripts/check-personal.sh
-      - name: manifests are valid JSON
-        run: |
-          python3 -m json.tool .claude-plugin/plugin.json > /dev/null
-          python3 -m json.tool .claude-plugin/marketplace.json > /dev/null
+      - name: manifests are valid and complete
+        run: python3 scripts/check-manifests.py

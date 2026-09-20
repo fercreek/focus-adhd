@@ -81,7 +81,7 @@ Built on ideas from [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). `scripts/check-personal.sh` runs in CI and as a pre-commit hook (`git config core.hooksPath .githooks`). It blocks home paths, emails and phone numbers from being committed.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Two checks run in CI and locally as git hooks (`git config core.hooksPath .githooks`): `scripts/check-personal.sh` blocks home paths, emails and phone numbers from being committed, and `scripts/check-manifests.py` fails if a manifest is missing a field Claude Code needs. Changes are recorded in [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 

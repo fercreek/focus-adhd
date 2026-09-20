@@ -24,5 +24,14 @@ Improvements to the rules are welcome. Three things keep the skill honest:
    The scan blocks home paths, emails and phone numbers. You can add your own private words to a local `.personal-blocklist`
    (one pattern per line); it is git-ignored.
 
+## Before opening a pull request
+
+```sh
+scripts/check-personal.sh      # the same scan CI runs
+python3 scripts/check-manifests.py
+claude plugin validate . --strict
+```
+
 Bump `version` in `.claude-plugin/plugin.json` with every change to the skill, or
-installed copies will not pick it up.
+installed copies will not pick it up, and add the change under `## [Unreleased]` in
+[CHANGELOG.md](CHANGELOG.md).
