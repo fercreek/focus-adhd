@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-09-20
+
 This release declares the skill stable. Nothing in how it behaves changed — the rules
 have been untouched since 0.2.1, and 0.3.0 and 0.4.0 were packaging. What changes is the
 promise:
@@ -80,7 +82,8 @@ First public release. No change to the skill's rules — this is packaging.
 - First release: the `focus-adhd` skill, the plugin and marketplace manifests, and the
   personal-data gate with its hooks and CI job.
 
-[Unreleased]: https://github.com/fercreek/focus-adhd/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/fercreek/focus-adhd/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/fercreek/focus-adhd/compare/v0.4.0...v1.0.0
 [0.4.0]: https://github.com/fercreek/focus-adhd/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/fercreek/focus-adhd/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/fercreek/focus-adhd/compare/v0.2.0...v0.2.1
