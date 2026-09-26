@@ -2,3 +2,5 @@
 # Private words that must never be published. Kept local on purpose:
 # listing them in a public file would publish them.
 .personal-blocklist
+# Raw eval rows stay local: generated text can echo the operator's machine.
+evals/results/

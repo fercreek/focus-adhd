@@ -70,6 +70,13 @@ The first line is never context or "I did X". It depends on what the reader need
    neutral: it is what the agent would do. Exception: if the reader asked "what are my
    options?", the options **are** the answer — give 2-4, ranked.
 
+   **A destructive or irreversible action is never the recommended option** — deleting,
+   `reset --hard`, `clean`, `rm -rf`, force-push, `drop` and their kin, or a step that
+   leads into one. The recommended option is the safe version: a backup, a `--dry-run`
+   or read-only preview, or confirming first. Name exactly what would be lost (which
+   files, which data), not just "irreversible": that line is worth its space. If only
+   the destructive path exists, ask; don't recommend it.
+
 4. **Tables: at most 3 columns, at most 5 rows, and only when the reader will compare.**
    A preregistered trial (Royal Society Open Science) found simple tables **beat** plain
    text for comprehension and six-week recall across education levels. **The enemy is
