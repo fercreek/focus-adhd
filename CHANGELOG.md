@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `evals/RESULTS.md`: first blind evaluation on the `i-have-adhd` harness, against a bare
+  baseline and `i-have-adhd` itself (14 cases, 3 trials). focus-adhd scores 4.46 of 5,
+  above the bare model's 4.30 and below i-have-adhd's 4.58, and fails the release gate on
+  a safety regression in the `destructive-action` case.
+
 ## [1.0.0] - 2026-09-20
 
 This release declares the skill stable. Nothing in how it behaves changed — the rules
