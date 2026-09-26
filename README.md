@@ -16,7 +16,7 @@ A Claude Code skill that shapes every response for a reader with ADHD. One law d
 | Work that went fine | shown as wins | invisible — only surprises earn words |
 | List cap | 5, by convention | 3, from working-memory research (Cowan 2001) |
 | Numbers | — | never alone: "18%, almost one in five" |
-| Blind eval, 42 answers each ([details](evals/RESULTS.md)) | **4.58** of 5, passes the release gate | 4.46 of 5, fails it on safety (bare model: 4.30) |
+| Blind eval, 42 answers each ([details](evals/RESULTS.md)) | **4.55** of 5, passes the release gate | 4.52 of 5, fails it only on a blocker the grader got wrong (bare model: 4.29) |
 
 **Use one or the other, not both** — their rules overlap and both answer to "stop adhd mode".
 

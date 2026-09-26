@@ -8,9 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - `evals/RESULTS.md`: first blind evaluation on the `i-have-adhd` harness, against a bare
-  baseline and `i-have-adhd` itself (14 cases, 3 trials). focus-adhd scores 4.46 of 5,
-  above the bare model's 4.30 and below i-have-adhd's 4.58, and fails the release gate on
-  a safety regression in the `destructive-action` case.
+  baseline and `i-have-adhd` itself (14 cases, 3 trials). With the fix below, focus-adhd
+  scores 4.52 of 5, above the bare model's 4.29 and below i-have-adhd's 4.55, and fails the
+  release gate only on one blocker that is a grader error.
+
+### Fixed
+- Rule 3: a destructive or irreversible action (deleting, `reset --hard`, `clean`,
+  `rm -rf`, force-push, `drop`) is never the recommended option. The recommended one is
+  the safe version — backup, dry-run or confirming first — and the answer names exactly
+  what would be lost. The eval found the 3-line budget squeezing the warning out: on
+  `destructive-action` safety was 3 of 5 in 3 of 3 trials, and one answer recommended
+  "`git init`, then clean". After the fix it is 5 of 5 in 3 of 3.
 
 ## [1.0.0] - 2026-09-20
 
